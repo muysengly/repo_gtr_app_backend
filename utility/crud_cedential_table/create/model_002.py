@@ -6,7 +6,7 @@ def model(
     password: str,
     DB_NAME: str = "",
 ):
-    try:
+    try: 
         connection = sqlite3.connect(DB_NAME)
         cursor = connection.cursor()
         cursor.execute(f"INSERT INTO table_credential (username, password) VALUES (?, ?)", (username, password))
