@@ -1,5 +1,7 @@
 /.git
 /.gitignore
 
-_*/
-**/_*
+# _*/
+# **/_*
+# !**/__init__.py
+# !**/_template
