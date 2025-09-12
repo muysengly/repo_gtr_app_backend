@@ -2,6 +2,6 @@ from utility.crud_cedential_table.delete.model_001 import model as delete_creden
 
 
 delete_credential(
-    cre_id="12",
+    cre_id="13",
     DB_NAME="database.sqlite",
 )
