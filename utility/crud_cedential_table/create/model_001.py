@@ -1,6 +1,5 @@
 import sqlite3
 
-
 def model(
     username: str,
     password: str,

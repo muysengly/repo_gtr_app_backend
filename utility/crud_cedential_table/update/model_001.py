@@ -1,4 +1,5 @@
 import sqlite3
+from datetime import datetime
 
 def model(
         username: str, 
@@ -7,7 +8,8 @@ def model(
     try:
         connection = sqlite3.connect(DB_NAME)
         cursor = connection.cursor()
-        cursor.execute("UPDATE table_credential SET password=? WHERE username=?",(new_password, username))
+        datetime_now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        cursor.execute("UPDATE table_credential SET password=?, updated_at=? WHERE username=?", (new_password, datetime_now, username))
         connection.commit()
         connection.close()
         print("Updated successfully")
