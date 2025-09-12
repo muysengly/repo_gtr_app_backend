@@ -1,10 +1,10 @@
-from utility.crud_user_info_table.create.model_002 import model as create_user_info
+from utility.crud_cedential_table.create.model_003 import model as create_credential
 
 
-create_user_info(
+create_credential(
     argkw={
-        "name": "Muy Sengly",
-        "telegram": "asdfasdfas",
+        "username": "admin002",
+        "password": "admin002",
     },
     DB_NAME="database.sqlite",
 )
