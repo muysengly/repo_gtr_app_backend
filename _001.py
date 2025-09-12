@@ -8,3 +8,6 @@ create_credential(
     },
     DB_NAME="database.sqlite",
 )
+
+from utility.crud_cedential_table.update.model_001 import model as update_credential
+update_credential("young","ping","database.sqlite")  
