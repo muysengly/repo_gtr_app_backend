@@ -4,6 +4,7 @@
 #     DB_NAME="database.sqlite",
 # )
 
+<<<<<<< HEAD
 
 # from utility.crud_user_info_table.create.model_004 import model 
 # model(
@@ -19,6 +20,8 @@
  
 # create_credential("heng","heng097","database.sqlite")  
 
+=======
+>>>>>>> c4a321e956ddbe70bb3ac5e8748c99ef6bd23bc0
 # from utility.crud_user_info_table.delete.model_001 import model as delete_credential
 # delete_credential("1","database.sqlite")  
 
@@ -35,6 +38,7 @@
 # from utility.crud_user_info_table.read.model_001 import model as read_user_info
 # read_user_info(DB_NAME="database.sqlite")
 
+<<<<<<< HEAD
 
 
 
@@ -64,3 +68,12 @@ credential_login(
 #     phone="098765443",
 #     DB_NAME="database.sqlite"
 # )
+=======
+from utility.credential_login.login.model_001 import model_001 as credential_login
+credential_login(
+    username="admin123",
+    password="admin12345",
+    DB_NAME="database.sqlite"
+)
+
+>>>>>>> c4a321e956ddbe70bb3ac5e8748c99ef6bd23bc0

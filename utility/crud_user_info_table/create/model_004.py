@@ -10,11 +10,7 @@ def model(
     connection = sqlite3.connect(DB_NAME)
     cursor = connection.cursor()
 
-    sql_query_insert_data = """
-    INSERT INTO table_user_info (
-        id_credential, name, email, phone
-    ) VALUES (?, ?, ?, ?);
-    """
+    sql_query_insert_data = "INSERT INTO table_user_info (id_credential, name, email, phone) VALUES (?, ?, ?, ?)"
 
     try:
         cursor.execute(sql_query_insert_data, (id_credential, name, email, phone))
