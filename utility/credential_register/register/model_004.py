@@ -7,34 +7,31 @@ if __name__ == "__main__":
     sys.path.append(os.getcwd())
     print(os.getcwd())
 
-def register(
-    username: str,
+def register_email(
+    email: str,
     password: str,
     name: str,
-    email: str,
     phone: str,
+    telegram: str,
     DB_NAME: str = "database.sqlite",
 ):
-    if len(username) < 6:
-        raise ValueError("Username must be at least 6 characters long")
-
+    if len(email) < 6:
+        raise ValueError("Email must be at least 6 characters long")
     connection = sqlite3.connect(DB_NAME)
     cursor = connection.cursor()
 
     try:
         cursor.execute("INSERT INTO table_credential (username, password) VALUES (?, ?)",
-                       (username, password),)
+                       (email, password),)
         id_credential = cursor.lastrowid
-
-        cursor.execute("INSERT INTO table_user_info (id_credential, name, email, phone) VALUES (?, ?, ?, ?)",
-                        (id_credential, name, email, phone),
-        )
-
+        cursor.execute("INSERT INTO table_user_info (id_credential, name, email, phone,telegram) VALUES (?, ?, ?, ? ,?)",
+                       (id_credential, name, email, phone, telegram),)
         connection.commit()
-        print("User registered successfully")
 
+        print(f"User '{name}' registered successfully with email '{email}'")
+        return {"id_credential": id_credential, "email": email}
     except sqlite3.IntegrityError as e:
         print("Registration failed:", e)
-
+        return None
     finally:
         connection.close()
