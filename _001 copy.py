@@ -68,17 +68,19 @@
 # )
 
 
-from utility.credential_register.register.model_004 import register_email
+from utility.credential_register.register.model_005 import register_email
 if __name__ == "__main__":
-    user = register_email(
-    email="jaker@example.com",
-    password="mypassword123",
-    name="jake Don",
-    phone="0123456789",
-    telegram="@jakerdon",
-    DB_NAME="database.sqlite"
-)
-print("Returned data:", user)
+    result = register_email(
+        email="testuser@example.com",
+        password="secure123",
+        name="Test User",
+        phone="0123456789",
+        telegram="@testuser"
+    )
+    if result:
+        print("Function returned:", result)
+
+
 
  
 
