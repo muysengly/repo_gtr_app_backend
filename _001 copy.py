@@ -49,15 +49,21 @@
 # update_credential("heng","pong123","database.sqlite")
 
 
-# from utility.credential_register.register.model_003 import register
-# register(
-#     username="vengey",
-#     password="veng123",
-#     name="Yu Veng",
-#     email="yu@123",
-#     phone="098765443",
-#     DB_NAME="database.sqlite"
-# )
+# from utility.credential_register.register.model_006 import register_email
+
+# result = register_email({
+#     "username": "rin123",
+#     "password": "rinpass",
+#     "name": "Rin Sok",
+#     "email": "rin@example.com",
+#     "phone": "012345678",
+#     "telegram": "@rin"
+# }, DB_PATH="database.sqlite")
+
+# print(result)
+
+
+
 
 
 # from utility.credential_login.login.model_001 import model_001 as credential_login
@@ -68,21 +74,22 @@
 # )
 
 
-from utility.credential_register.register.model_005 import register_email
-if __name__ == "__main__":
-    result = register_email(
-        email="testuser@example.com",
-        password="secure123",
-        name="Test User",
-        phone="0123456789",
-        telegram="@testuser"
-    )
-    if result:
-        print("Function returned:", result)
 
 
-
+# from utility.crud_user_info_table.delete.model_001 import model
+# model(
+#     id_credential=43,
+#     DB_PATH="database.sqlite",
+# )
  
 
+# from utility.crud_user_info_table.create.model_005 import model
+# model({
+#     "id_credential": 20,
+#     "name": "Test User",
+#     "email": "test111@gmail.com",
+#     "phone": "0123456789",
+#     "telegram": "@testuser"
+# }, DB_NAME="database.sqlite")
 
 
