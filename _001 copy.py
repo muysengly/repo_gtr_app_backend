@@ -50,7 +50,6 @@
 
 
 # from utility.credential_register.register.model_006 import register_email
-
 # result = register_email({
 #     "username": "rin123",
 #     "password": "rinpass",
@@ -59,7 +58,6 @@
 #     "phone": "012345678",
 #     "telegram": "@rin"
 # }, DB_PATH="database.sqlite")
-
 # print(result)
 
 
@@ -83,13 +81,12 @@
 # )
  
 
-# from utility.crud_user_info_table.create.model_005 import model
-# model({
-#     "id_credential": 20,
-#     "name": "Test User",
-#     "email": "test111@gmail.com",
-#     "phone": "0123456789",
-#     "telegram": "@testuser"
-# }, DB_NAME="database.sqlite")
-
-
+from utility.crud_user_info_table.create.model_005 import model
+result = model({
+    "id_credential": 41,
+    "name": "Sang Heang",
+    "email": "sang111@gmail.com",
+    "phone": "0123456789",
+    "telegram": "@sang123"
+}, DB_NAME="database.sqlite")
+print(result)
